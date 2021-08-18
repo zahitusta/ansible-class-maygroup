@@ -12,11 +12,13 @@
   - name: Install multiple packages
     ansible.builtin.package:
       name: "{{ item }}"
+      state: present
     with_items:
     - apache2
     - telnet
     - unzip
-    
+
+
         
         
 ...
