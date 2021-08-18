@@ -10,7 +10,10 @@
 
 
   - name: Install apache2
-    package:
-      name: apache2
+    ansible.builtin.package:
+      name: 
+        - apache2
+        - telnet
+        - unzip
       state: present      #latest      #absent
 ...
