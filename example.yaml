@@ -9,11 +9,14 @@
 
 
 
-  - name: Install apache2
+  - name: Install multiple packages
     ansible.builtin.package:
-      name: 
-        - apache2
-        - telnet
-        - unzip
-      state: present      #latest      #absent
+      name: "{{ item }}"
+    with_items:
+    - apache2
+    - telnet
+    - unzip
+    
+        
+        
 ...
